@@ -1,1 +1,22 @@
-<p>projects works!</p>
+<h2 class="text-yellow-800 text-lg  font-bold mb-3 text-center" style="color: #ff9900;">
+    <i class="fa fa-certificate fa-fw mr-2 text-warning"></i>Projects
+</h2>
+
+<div class="container">
+    <!-- Project items -->
+    <div *ngFor="let project of projects" class="mb-4">
+        <div class="card border-none">
+            <div class="card-header bg-secondary text-white">
+                <h5 class="card-title mb-0">{{ project.name }}</h5>
+                <p class="card-subtitle text-blue mb-0">{{ project.description }}</p>
+            </div>
+            <div class="card-body">
+                <p class="card-text">{{ project.details }}</p>
+                <p *ngIf="project.role" class="card-text"><b>Role:</b> {{ project.role }}</p>
+                <p *ngIf="project.libraries" class="card-text"><b>Libraries:</b> {{ project.libraries }}</p>
+                <p *ngIf="project.dependency" class="card-text"><b>Dependency:</b> {{ project.dependency }}</p>
+                <p *ngIf="project.technologies" class="card-text"><b>Technologies:</b> {{ project.technologies }}</p>
+            </div>
+        </div>
+    </div>
+</div>

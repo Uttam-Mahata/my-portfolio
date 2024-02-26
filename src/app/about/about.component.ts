@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
+  constructor() { }
+
+  toggleNavbar() {
+    const navbarCollapse = document.getElementById('navbarNav');
+    navbarCollapse.classList.toggle('show');
+  }
 
 }

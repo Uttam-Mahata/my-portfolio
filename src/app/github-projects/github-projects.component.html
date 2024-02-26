@@ -1,0 +1,23 @@
+<h2 class="text-center text-yellow-800 text-lg font-bold mb-4" style="color: #ff9900;">
+  <i class="fa fa-certificate fa-fw mr-2 text-warning"></i>GitHub Projects
+</h2>
+
+<div class="container">
+  <div *ngIf="projects" class="row">
+    <div *ngFor="let project of projects" class="col-lg-6 col-md-6 mb-4">
+      <div class="card border-secondary h-100">
+        <div class="card-body">
+          <h5 class="card-title font-weight-bold mb-2">{{ project.name }}</h5>
+          <h6 class="card-subtitle text-muted mb-3">{{ project.description }}</h6>
+          <p class="card-text mb-3">{{ project.details }}</p>
+          <ul class="list-unstyled">
+            <li *ngIf="project.role" class="card-text"><b>Role:</b> {{ project.role }}</li>
+            <li *ngIf="project.libraries" class="card-text"><b>Libraries:</b> {{ project.libraries }}</li>
+            <li *ngIf="project.dependency" class="card-text"><b>Dependency:</b> {{ project.dependency }}</li>
+            <li *ngIf="project.technologies" class="card-text"><b>Technologies:</b> {{ project.technologies }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
