@@ -15,6 +15,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
 import { GithubProjectsComponent } from './github-projects/github-projects.component';
 import { GithubService } from './service/github.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faFontAwesomeLogoFull } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { GithubService } from './service/github.service';
     MatIconModule,
     MatButtonModule,
     MatCardModule,
+    FontAwesomeModule,
   ],
   providers: [
     GithubService, // Provided GithubService

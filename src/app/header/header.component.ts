@@ -6,21 +6,22 @@ import { Component, HostListener } from '@angular/core';
 })
 export class HeaderComponent {
   isMobileView: boolean = false;
+  isNavbarCollapsed: boolean = true;
 
-  constructor() { }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.checkIfMobileView();
+  constructor() {
+    this.checkIsMobileView();
+    window.addEventListener('resize', () => {
+      this.checkIsMobileView();
+    });
   }
 
-  ngOnInit() {
-    // Initial check on component initialization
-    this.checkIfMobileView();
+  toggleNavbar() {
+    this.isNavbarCollapsed = !this.isNavbarCollapsed;
   }
 
-  checkIfMobileView() {
-    // Determine if the window width is less than a certain value (e.g., 768px for tablets)
-    this.isMobileView = window.innerWidth < 768;
+  private checkIsMobileView() {
+    this.isMobileView = window.innerWidth < 992; // Bootstrap lg breakpoint
   }
+
+
 }

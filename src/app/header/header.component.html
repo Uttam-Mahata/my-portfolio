@@ -1,15 +1,15 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
   <div class="container">
     <!-- Center the name if mobile or tablet view -->
-    <a *ngIf="isMobileView" class="navbar-brand text-center" href="#">Uttam Mahata</a>
-    <a *ngIf="!isMobileView" class="navbar-brand text-center" href="#">Uttam Mahata</a>
+    <a *ngIf="isMobileView" class="navbar-brand text-center" href="#top">Uttam Mahata</a>
+    <a *ngIf="!isMobileView" class="navbar-brand" href="#top">Uttam Mahata</a>
 
     <!-- Toggle button and navigation links -->
-    <button *ngIf="!isMobileView" class="navbar-toggler" type="button" (click)="toggleNavbar()">
+    <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed">
       <span class="navbar-toggler-icon"></span>
     </button>
     
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav" [ngClass]="{ 'show': !isMobileView }">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav" [ngClass]="{ 'show': !isNavbarCollapsed }">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="#about">About</a>
