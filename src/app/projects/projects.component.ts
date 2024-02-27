@@ -12,14 +12,16 @@ export class ProjectsComponent implements OnInit {
       description: 'Correlation Driven Cluster Formation',
       details: 'Optimizes document clustering using correlation-based clustering. Preprocesses text documents, applies clustering optimization, and compares the performance of various clustering algorithms.',
       dependency: 'Python3.x',
-      libraries: 'Pandas, NumPy, scikit-learn, Matplotlib, NLTK'
+      libraries: 'Pandas, NumPy, scikit-learn, Matplotlib, NLTK',
+      link: 'https://github.com/Uttam-Mahata/Optimizing-Document-Clustering-using-Correlation'
     },
     {
       name: 'Winners Education - Frontend Development',
       description: 'Winners Education Website',
       details: 'Currently, I am actively contributing to the frontend development of the Winners Education website. Winners Education is a dynamic learning platform.',
       role: 'Frontend Developer',
-      technologies: 'Angular, Primeng, TypeScript, HTML, CSS'
+      technologies: 'Angular, Primeng, TypeScript, HTML, CSS',
+      link:'https://winners-v2.web.app/'
     }
     // Add more projects as needed
   ];

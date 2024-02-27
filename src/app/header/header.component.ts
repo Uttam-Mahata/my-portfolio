@@ -1,27 +1,29 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
 })
-export class HeaderComponent {
-  isMobileView: boolean = false;
-  isNavbarCollapsed: boolean = true;
+export class HeaderComponent implements OnInit {
+  isMobileView = false;
+  isNavbarCollapsed = true;
 
-  constructor() {
-    this.checkIsMobileView();
-    window.addEventListener('resize', () => {
-      this.checkIsMobileView();
-    });
+  constructor(private breakpointObserver: BreakpointObserver) {}
+
+  ngOnInit(): void {
+    this.breakpointObserver.observe([Breakpoints.Handset])
+      .pipe(map(result => result.matches))
+      .subscribe(isMobile => {
+        this.isMobileView = isMobile;
+        if (this.isMobileView) {
+          this.isNavbarCollapsed = true;
+        }
+      });
   }
 
-  toggleNavbar() {
+  toggleNavbar(): void {
     this.isNavbarCollapsed = !this.isNavbarCollapsed;
   }
-
-  private checkIsMobileView() {
-    this.isMobileView = window.innerWidth < 992; // Bootstrap lg breakpoint
-  }
-
-
 }

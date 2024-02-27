@@ -8,7 +8,8 @@
         <div class="card border-none">
             <div class="card-header bg-secondary text-white">
                 <h5 class="card-title mb-0">{{ project.name }}</h5>
-                <p class="card-subtitle text-blue mb-0">{{ project.description }}</p>
+                <!-- add link to description -->
+                <a *ngIf="project.link" href="{{ project.link }}" target="_blank" class="card-subtitle text-blue mb-0" style="text-decoration: none;" >{{ project.description }}</a>
             </div>
             <div class="card-body">
                 <p class="card-text">{{ project.details }}</p>

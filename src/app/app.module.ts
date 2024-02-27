@@ -16,7 +16,9 @@ import { FooterComponent } from './footer/footer.component';
 import { GithubProjectsComponent } from './github-projects/github-projects.component';
 import { GithubService } from './service/github.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faFontAwesomeLogoFull } from '@fortawesome/free-solid-svg-icons';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { faFontAwesomeLogoFull } from '@fortawesome/free-solid-svg-icons';
     ProjectsComponent,
     FooterComponent,
     GithubProjectsComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,8 @@ import { faFontAwesomeLogoFull } from '@fortawesome/free-solid-svg-icons';
     MatButtonModule,
     MatCardModule,
     FontAwesomeModule,
+    RouterModule,
+    AppRoutingModule
   ],
   providers: [
     GithubService, // Provided GithubService
