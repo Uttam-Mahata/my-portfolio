@@ -1,18 +1,10 @@
 <mat-toolbar color="primary" class="text-dark header-toolbar justify-content-center bg-light">
-  <!-- Centered name for large screens -->
-    <div class="text-center mr-auto" *ngIf="!isMobileView">
-      <span class="navbar-brand">Uttam Mahata &nbsp;</span>
-    </div>
  
-
-  <!-- Custom toggle button for small screens -->
-
-
   <!-- Navigation links -->
-    <a mat-button class="nav-link text-dark" routerLink="/">Home</a>
-    <a mat-button class="nav-link text-dark" routerLink="/education">Education</a>
-    <a mat-button class="nav-link text-dark" routerLink="/skills">Skills</a>
-    <a mat-button class="nav-link text-dark" routerLink="/projects">Projects</a>
+    <a mat-button class="nav-link text-dark" routerLink="/" routerLinkActive="">About</a>
+    <a mat-button class="nav-link text-dark" routerLink="/education" routerLinkActive="active">Education</a>
+    <a mat-button class="nav-link text-dark" routerLink="/skills" routerLinkActive="active">Skills</a>
+    <a mat-button class="nav-link text-dark" routerLink="/projects" routerLinkActive="active">Projects</a>
 </mat-toolbar>
 <style>
   .header-toolbar {
@@ -43,6 +35,11 @@
   .mr-auto {
     display: none;
   }
+}
+
+.active {
+  background-color: #007bff !important; /* bg-primary color in Bootstrap */
+  color: #fff !important;
 }
 
 </style>
