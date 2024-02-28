@@ -1,5 +1,6 @@
-<h2 class="text-center text-yellow-800 text-lg font-bold mb-4" style="color: #ff9900;">
-  <i class="fa fa-certificate fa-fw mr-2 text-warning"></i>GitHub Projects
+<!-- github-projects.component.html -->
+<h2 class="text-center text-yellow-800 text-lg font-bold mb-4">
+  My Github Repositories
 </h2>
 
 <div class="container">
@@ -7,15 +8,14 @@
     <div *ngFor="let project of projects" class="col-lg-6 col-md-6 mb-4">
       <div class="card h-100">
         <div class="card-body">
-          <h5 class="card-title font-weight-bold mb-2">{{ project.name }}</h5>
+          <!-- BEGIN: Modified Code -->
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="card-title font-weight-bold mb-0">{{ project.name }}</h5>
+            <a [href]="project.githubLink" target="_blank" class="btn btn-primary">Go to Repository</a>
+          </div>
+          <!-- END: Modified Code -->
           <h6 class="card-subtitle text-muted mb-3">{{ project.description }}</h6>
           <p class="card-text mb-3">{{ project.details }}</p>
-          <ul class="list-unstyled">
-            <li *ngIf="project.role" class="card-text"><b>Role:</b> {{ project.role }}</li>
-            <li *ngIf="project.libraries" class="card-text"><b>Libraries:</b> {{ project.libraries }}</li>
-            <li *ngIf="project.dependency" class="card-text"><b>Dependency:</b> {{ project.dependency }}</li>
-            <li *ngIf="project.technologies" class="card-text"><b>Technologies:</b> {{ project.technologies }}</li>
-          </ul>
         </div>
       </div>
     </div>

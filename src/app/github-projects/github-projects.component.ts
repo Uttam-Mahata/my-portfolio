@@ -7,7 +7,8 @@ import { GithubService } from '../service/github.service';
   styleUrls: ['./github-projects.component.css'] // Corrected from styleUrl to styleUrls
 })
 export class GithubProjectsComponent implements OnInit { // Implement OnInit
-  projects: any[];
+  
+  projects: Project[];
 
   constructor(private githubService: GithubService) { }
 
@@ -19,7 +20,11 @@ export class GithubProjectsComponent implements OnInit { // Implement OnInit
     this.githubService.fetchGitHubProjects()
       .subscribe(
         data => {
-          this.projects = data;
+          this.projects = data.map(project => ({
+            ...project,
+            // Assuming the GitHub API provides the project name
+            githubLink: `https://github.com/Uttam-Mahata/${project.name}`
+          }));
         },
         error => {
           console.error('Error fetching GitHub projects:', error);
@@ -27,3 +32,11 @@ export class GithubProjectsComponent implements OnInit { // Implement OnInit
       );
   }
 }
+// project.ts
+export interface Project {
+  name: string;
+  description: string;
+  details: string;
+  githubLink: string;
+}
+
