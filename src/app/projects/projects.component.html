@@ -22,7 +22,8 @@
                 <p *ngIf="project.libraries" class="card-text"><b>Libraries:</b> {{ project.libraries }}</p>
                 <p *ngIf="project.dependency" class="card-text"><b>Dependency:</b> {{ project.dependency }}</p>
                 <p *ngIf="project.technologies" class="card-text"><b>Technologies:</b> {{ project.technologies }}</p>
-                <a *ngIf="project.link" href="{{ project.link }}" target="_blank" class="card-subtitle text-blue mb-0" style="text-decoration: none;">{{ project.description }}</a>
+                <a *ngIf="project.description" href="{{ project.link }}" target="_blank" class="btn btn-primary">View Project</a>
+        
             </div>
         </div>
     </div>

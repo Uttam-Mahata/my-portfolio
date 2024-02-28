@@ -27,7 +27,6 @@ export class ProjectsComponent implements OnInit {
     },
     {
       name: 'Question Answer Analysis using NLP',
-      description: 'Natural Language Processing',
       details: 'Working with question-answer analysis system using NLP. The system will analyze the question and answer according to reference answers for each student and provide grade for each question based on the similarity score between them.',
       dependency: 'Python3.x',
       libraries: 'Pandas, NumPy, scikit-learn, Matplotlib, NLTK',
