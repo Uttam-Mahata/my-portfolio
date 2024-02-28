@@ -1,16 +1,16 @@
 <!-- Skills Section -->
 <div class="container">
-    <h2 class="text-yellow-800 text-lg font-bold mb-2 text-center">
+    <h2 class="text-yellow-800 text-lg font-bold mb-4 text-center">
        My Skills
-    </h2><div class="container mt-4">
+    </h2>
     <div class="row">
         <!-- Technical Skills Column -->
-        <div class="col-md-6 mb-2">
+        <div class="col-md-6 mb-4">
             <div class="card shadow">
                 <div class="card-body">
-                    <h4 class="card-title text-yellow-800 text-lg font-bold mb-2"><i class="fa fa-code fa-fw mr-2 text-warning"></i> &nbsp;Technical Skills</h4>
+                    <h4 class="card-title text-yellow-800 text-lg font-bold mb-3"><i class="fa fa-code fa-fw mr-2 text-warning"></i> &nbsp;Technical Skills</h4>
                     <!-- Programming Languages -->
-                    <div class="mb-2">
+                    <div class="mb-3">
                         <p class="opacity-75"><b>Programming Languages</b></p>
                         <ul class="list-unstyled">
                             <li>C/C++</li>
@@ -19,7 +19,7 @@
                         </ul>
                     </div>
                     <!-- Frameworks -->
-                    <div class="mb-2">
+                    <div class="mb-3">
                         <p class="opacity-75"><b>Frameworks</b></p>
                         <ul class="list-unstyled">
                             <li>Bootstrap</li>
@@ -67,3 +67,20 @@
         </div>
     </div>
 </div>
+<style>
+    /* Card hover effect */
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button focus effect */
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+</style>
