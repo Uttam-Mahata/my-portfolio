@@ -40,21 +40,7 @@ export class AppComponent {
   navigateToGithubProjects() {
     this.router.navigate(['github-projects']);
   }
-  ngOnInit(): void {
-    const firebaseConfig = {
-      apiKey: "AIzaSyC9EhITuvCJ6RuSfLgvHL8VaMF2LF77XUU",
-      authDomain: "uttamm-40a89.firebaseapp.com",
-      projectId: "uttamm-40a89",
-      storageBucket: "uttamm-40a89.appspot.com",
-      messagingSenderId: "167532590221",
-      appId: "1:167532590221:web:19254401d245e8f14b9ec4",
-      measurementId: "G-EPYNNEB42R"
-    };
-    
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-  }
+ 
 
 }
 
