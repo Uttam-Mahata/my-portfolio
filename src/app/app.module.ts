@@ -19,6 +19,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { ContactComponent } from './contact/contact.component';
+
+import { ButtonModule } from 'primeng/button';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
@@ -32,7 +34,7 @@ import { getAnalytics } from "firebase/analytics";
     ProjectsComponent,
     FooterComponent,
     GithubProjectsComponent,
-    ContactComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { getAnalytics } from "firebase/analytics";
     MatCardModule,
     FontAwesomeModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ButtonModule
   ],
   providers: [
     GithubService, // Provided GithubService

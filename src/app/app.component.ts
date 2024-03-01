@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { PrimeNGConfig } from 'primeng/api';
 import { AboutComponent } from './about/about.component';
 import { EducationComponent } from './education/education.component';
 import { FooterComponent } from './footer/footer.component';
@@ -18,7 +19,7 @@ import { getAnalytics } from "firebase/analytics";
 })
 export class AppComponent {
   title = 'my-portfolio';
-  constructor(private router: Router) { }
+  constructor(private router: Router, private primengConfig: PrimeNGConfig) { }
   navigateToAbout() {
     this.router.navigate(['about']);
   }
@@ -40,6 +41,7 @@ export class AppComponent {
   navigateToGithubProjects() {
     this.router.navigate(['github-projects']);
   }
+
  
 
 }

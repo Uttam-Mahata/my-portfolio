@@ -5,17 +5,17 @@
 
 <div class="container">
   <div *ngIf="projects" class="row">
-    <div *ngFor="let project of projects" class="col-lg-6 col-md-6 mb-4">
+    <div *ngFor="let project of projects" class="col-lg-6 col-md-6 mb-2">
       <div class="card h-100 project-card">
         <div class="card-body">
           <!-- BEGIN: Modified Code -->
-          <div class="d-flex justify-content-between align-items-center mb-3">
+          <div class="d-flex justify-content-between align-items-center mb-2">
             <h5 class="card-title font-weight-bold mb-0">{{ project.name }}</h5>
-            <a [href]="project.githubLink" target="_blank" class="btn btn-primary">Go to Repository</a>
+            <a [href]="project.githubLink" target="_blank" class="btn btn-primary">View Repo</a>
           </div>
           <!-- END: Modified Code -->
           <h6 class="card-subtitle text-muted mb-3">{{ project.description }}</h6>
-          <p class="card-text mb-3">{{ project.details }}</p>
+          <p class="card-text mb-2">{{ project.details }}</p>
         </div>
       </div>
     </div>

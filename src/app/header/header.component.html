@@ -1,14 +1,20 @@
-<mat-toolbar color="primary" class="text-dark header-toolbar justify-content-center bg-light">
+<mat-toolbar color="primary" class="text-dark header-toolbar justify-content-center bg-dark">
  
-    <a mat-button class="nav-link text-dark" routerLink="/" routerLinkActive="">About</a>
-    <a mat-button class="nav-link text-dark" routerLink="/education" routerLinkActive="active">Education</a>
-    <a mat-button class="nav-link text-dark" routerLink="/skills" routerLinkActive="active">Skills</a>
-    <a mat-button class="nav-link text-dark" routerLink="/projects" routerLinkActive="active">Projects</a>
+    <a mat-button class="nav-link text-white bg-default" routerLink="/" routerLinkActive="">About</a>
+    
+    <a mat-button class="nav-link text-white" routerLink="/education" routerLinkActive="active">Education</a>
+    <a mat-button class="nav-link text-white" routerLink="/skills" routerLinkActive="active">Skills</a>
+    <a mat-button class="nav-link text-white" routerLink="/projects" routerLinkActive="active">Projects</a>
 </mat-toolbar>
+
+
 <style>
-  .header-toolbar {
+.header-toolbar {
     background: #4FACFE;
     padding: 10px 0;
+    position: sticky; /* Add this line */
+    top: 0; /* Add this line */
+    z-index: 1000; /* Add this line */
 }
 
 .nav-link {
@@ -20,26 +26,11 @@
     color: #007bff;
 }
 
-.toggle-button {
-  display: none;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
 
-.toggle-button .line {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background-color: #fff;
-  margin: 4px 0;
-}
+
 
 @media (max-width: 767px) {
-  .toggle-button {
-    display: block;
-  }
+ 
 
   .mr-auto {
     display: none;
@@ -52,6 +43,4 @@
 }
 
 </style>
-
-<!-- New CSS -->
 
