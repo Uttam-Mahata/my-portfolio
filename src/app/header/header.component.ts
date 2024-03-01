@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
   isEducationActive: boolean = false;
   isSkillsActive: boolean = false;
   isProjectsActive: boolean = false;
+  isMenuOpen: boolean = false;
 
   constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
     this.router.events.subscribe((event) => {
@@ -45,5 +46,10 @@ export class HeaderComponent implements OnInit {
 
   toggleNavbar(): void {
     this.isNavbarCollapsed = !this.isNavbarCollapsed;
+  }
+
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }

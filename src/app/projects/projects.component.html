@@ -1,47 +1,49 @@
-<h2 class="text-yellow-800 text-lg font-bold mb-2 text-center">
-    My Projects
-</h2>
-
-<div class="container">
-    <div class="row">
-        <!-- Project items -->
-        <div *ngFor="let project of projects" class="col-md-12 col-lg-6 mb-4">
-            <div class="card border-none h-100">
-                <!-- BEGIN: Modified card-header -->
-                <div class="card-header bg-secondary text-white d-flex justify-content-between align-items-center">
-                    <h5 class="card-title mb-0">{{ project.name }}</h5>
-                    <div>
-                        <i class="far fa-calendar-alt fa-lg text-warning"></i>
-                        <span class="text-light">&nbsp;{{ project.workPeriod }}</span>
+<div class="bg-dark">
+    <h2 class="text-white text-lg font-bold mb-2 text-center">
+        My Projects
+    </h2>
+    
+    <div class="container">
+        <div class="row">
+            <!-- Project items -->
+            <div *ngFor="let project of projects" class="col-md-12 col-lg-6 mb-4">
+                <div class="card h-100">
+                    <!-- BEGIN: Modified card-header -->
+                    <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+                        <h5 class="card-title mb-0">{{ project.name }}</h5>
+                      
+    
                     </div>
-
-                </div>
-                <!-- END: Modified card-header -->
-                <div class="card-body">
-
-                    <p class="card-text">{{ project.details }}</p>
-                    <p *ngIf="project.role" class="card-text"><b>Role:</b> {{ project.role }}</p>
-                    <p *ngIf="project.libraries" class="card-text"><b>Libraries:</b> {{ project.libraries }}</p>
-                    <p *ngIf="project.dependency" class="card-text"><b>Dependency:</b> {{ project.dependency }}</p>
-                    <p *ngIf="project.technologies" class="card-text"><b>Technologies:</b> {{ project.technologies }}
-                    </p>
-
-                    <a *ngIf="project.description" href="{{ project.link }}" target="_blank"
-                        class="btn btn-primary">View Project</a>
-
+                    <!-- END: Modified card-header -->
+                    <div class="card-body bg-dark text-white">
+    
+                        <p class="card-text">{{ project.details }}</p>
+                        <p>
+                            <i class="far fa-calendar-alt fa-lg text-warning"></i>
+                            <span class="text-light">&nbsp;{{ project.workPeriod }}</span>
+                        </p>
+                        <p *ngIf="project.role" class="card-text"><b>Role:</b> {{ project.role }}</p>
+                        <p *ngIf="project.libraries" class="card-text"><b>Libraries:</b> {{ project.libraries }}</p>
+                        <p *ngIf="project.dependency" class="card-text"><b>Dependency:</b> {{ project.dependency }}</p>
+                        <p *ngIf="project.technologies" class="card-text"><b>Technologies:</b> {{ project.technologies }}
+                        </p>
+    
+                        <a *ngIf="project.description" href="{{ project.link }}" target="_blank"
+                            class="btn btn-primary">View Project</a>
+    
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <app-github-projects></app-github-projects>
 </div>
-<app-github-projects></app-github-projects>
 
 <style>
     /* Card hover effect */
     .card:hover {
         transform: scale(1.02);
         transition: transform 0.3s ease;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 
     }
 
@@ -50,5 +52,6 @@
 
     .card {
         height: 100%;
+        
     }
 </style>
