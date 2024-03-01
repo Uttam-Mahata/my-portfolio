@@ -6,7 +6,7 @@
     <div class="row">
         <!-- Project items -->
         <div *ngFor="let project of projects" class="col-md-4 col-lg-6 mb-4">
-            <div class="card border-none shadow-lg h-100">
+            <div class="card border-none h-100">
                 <!-- BEGIN: Modified card-header -->
                 <div class="card-header bg-secondary text-white d-flex justify-content-between align-items-center">
                     <h5 class="card-title mb-0">{{ project.name }}</h5>
@@ -41,13 +41,12 @@
     .card:hover {
         transform: scale(1.02);
         transition: transform 0.3s ease;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
     }
 
 
-    /* Button focus effect */
-    .btn-primary:focus {
-        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
-    }
+
 
     .card {
         height: 100%;

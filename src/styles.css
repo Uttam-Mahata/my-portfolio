@@ -3,3 +3,11 @@
 @import "@fortawesome/fontawesome-free/css/all.css";
 /* Import material icons */
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+
+/* Import tailwind base */
+/* Import tailwind components */
+@import "tailwindcss/components.css";
+
+/* Import tailwind utilities */
+@import "tailwindcss/utilities.css";
