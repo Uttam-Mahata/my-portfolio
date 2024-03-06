@@ -1,6 +1,5 @@
 <!-- github-projects.component.html -->
 
-
 <div class="container bg-dark">
   <h2 class="text-center text-white text-lg font-bold mb-4">
     My Github Repositories
@@ -11,7 +10,7 @@
         <div class="card-body">
           <!-- BEGIN: Modified Code -->
           <div class="d-flex justify-content-between align-items-center mb-2">
-            <h5 class="card-title font-weight-bold mb-0">{{ project.name }}</h5>
+            <h5 class="card-title font-weight-bold mb-0 border-none">{{ project.name }}</h5>
             <a [href]="project.githubLink" target="_blank" class="btn btn-primary">View Repo</a>
           </div>
           <!-- END: Modified Code -->
@@ -25,10 +24,12 @@
 <style>
 .project-card {
   transition: transform 0.3s ease;
+  animation: flyin 0.5s forwards;
 }
 
 .project-card:hover {
   transform: scale(1.02);
   box-shadow: 0 10px 20px rgba(234, 230, 230, 0.1);
 }
+
 </style>

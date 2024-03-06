@@ -11,12 +11,9 @@
                     <!-- BEGIN: Modified card-header -->
                     <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
                         <h5 class="card-title mb-0">{{ project.name }}</h5>
-                      
-    
                     </div>
                     <!-- END: Modified card-header -->
                     <div class="card-body bg-dark text-white">
-    
                         <p class="card-text">{{ project.details }}</p>
                         <p>
                             <i class="far fa-calendar-alt fa-lg text-warning"></i>
@@ -25,12 +22,8 @@
                         <p *ngIf="project.role" class="card-text"><b>Role:</b> {{ project.role }}</p>
                         <p *ngIf="project.libraries" class="card-text"><b>Libraries:</b> {{ project.libraries }}</p>
                         <p *ngIf="project.dependency" class="card-text"><b>Dependency:</b> {{ project.dependency }}</p>
-                        <p *ngIf="project.technologies" class="card-text"><b>Technologies:</b> {{ project.technologies }}
-                        </p>
-    
-                        <a *ngIf="project.description" href="{{ project.link }}" target="_blank"
-                            class="btn btn-primary">View Project</a>
-    
+                        <p *ngIf="project.technologies" class="card-text"><b>Technologies:</b> {{ project.technologies }}</p>
+                        <a *ngIf="project.description" href="{{ project.link }}" target="_blank" class="btn btn-primary">View Project</a>
                     </div>
                 </div>
             </div>
@@ -44,14 +37,33 @@
     .card:hover {
         transform: scale(1.02);
         transition: transform 0.3s ease;
-
+        box-shadow: 0 8px 16px 0 rgb(241, 241, 241);
     }
-
-
-
 
     .card {
         height: 100%;
-        
+        border-radius: 15px;
+        overflow: hidden;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .card-header, .card-body {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 1.5em;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        color: #fff;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
     }
 </style>
