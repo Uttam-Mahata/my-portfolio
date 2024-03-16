@@ -26,10 +26,10 @@ export class ProjectsComponent implements OnInit {
       workPeriod: 'July 2023 - Present'
     },
     {
-      name: 'Question Answer Analysis using NLP',
+      name: 'Question Answer Analysis',
       details: 'Working with question-answer analysis system using NLP. The system will analyze the question and answer according to reference answers for each student and provide grade for each question based on the similarity score between them.',
       dependency: 'Python3.x',
-      libraries: 'Pandas, NumPy, scikit-learn, Matplotlib, NLTK',
+      libraries: 'Pandas, NumPy, scikit-learn, Matplotlib, Spacy, Sentence-Transformers, Clustering Algorithms',
       workPeriod: 'Jan 2024 - Present'
     }
     // Add more projects as needed
