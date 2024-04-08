@@ -1,40 +1,42 @@
 <div class="bg-dark">
     <!-- Education Section -->
 
-<div class="container  bg-dark">
-    <h2 class="text-white text-lg font-bold mb-2 text-center"><i
-        class="fa fa-graduation-cap fa-fw mr-2 text-white p-2"></i> &nbsp;Education</h2>
+    <div class="container  bg-dark">
+        <h2 class="text-white text-lg font-bold mb-2 text-center"><i
+                class="fa fa-graduation-cap fa-fw mr-2 text-white p-2"></i> &nbsp;Education</h2>
 
-    <div class="row">
-        <div class="col-md-6">
-            <!-- BEGIN: Card View -->
-            <div class="card mb-4 education-card bg-dark text-white float-in">
-                <div class="card-body">
-                    <div class="mb-3">
-                        <p class="opacity-90 mb-1 text-white"><b>Indian Institute of Engineering Science and Technology,
-                                Shibpur</b></p>
-                        <p class="mb-1"><i class="fa fa-calendar fa-fw mr-2"></i> &nbsp;Nov 2022 -  <span class="badge text-bg-warning">Current</span></p>
-                        <p class="mb-0">Bachelor of Technology in Computer Science and Technology</p>
+        <div class="row">
+            <div class="col-md-6">
+                <!-- BEGIN: Card View -->
+                <div class="card mb-4 education-card bg-dark text-white float-in">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <p class="opacity-90 mb-1 text-white"><b>Indian Institute of Engineering Science and
+                                    Technology,
+                                    Shibpur</b></p>
+                            <p class="mb-1"><i class="fa fa-calendar fa-fw mr-2"></i> &nbsp;Nov 2022 - <span
+                                    class="badge text-bg-warning">Current</span></p>
+                            <p class="mb-0">Bachelor of Technology in Computer Science and Technology</p>
+                        </div>
                     </div>
                 </div>
+                <!-- END: Card View -->
             </div>
-            <!-- END: Card View -->
-        </div>
-        <div class="col-md-6">
-            <!-- BEGIN: Card View -->
-            <div class="card mb-4 education-card bg-dark text-white float-in">
-                <div class="card-body">
-                    <div class="mb-3">
-                        <p class="opacity-90 mb-1"><b>Bandhgora Anchal Vidyalaya (H.S), Jhargram</b></p>
-                        <p class="text-white mb-1"><i class="fa fa-calendar fa-fw mr-2"></i>&nbsp;2013 - 2021</p>
-                        <p class="mb-0">Secondary and Higher Secondary</p>
+            <div class="col-md-6">
+                <!-- BEGIN: Card View -->
+                <div class="card mb-4 education-card bg-dark text-white float-in">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <p class="opacity-90 mb-1"><b>Bandhgora Anchal Vidyalaya (H.S), Jhargram</b></p>
+                            <p class="text-white mb-1"><i class="fa fa-calendar fa-fw mr-2"></i>&nbsp;2013 - 2021</p>
+                            <p class="mb-0">Secondary and Higher Secondary</p>
+                        </div>
                     </div>
                 </div>
+                <!-- END: Card View -->
             </div>
-            <!-- END: Card View -->
         </div>
     </div>
-</div>
 </div>
 
 <style>
@@ -55,9 +57,38 @@
             opacity: 0;
             transform: translateY(50px);
         }
+
         100% {
             opacity: 1;
             transform: translateY(0);
         }
+    }
+
+    /* Add some spacing between the cards */
+    .education-card {
+        margin-bottom: 20px;
+    }
+
+    /* Make the card titles more prominent */
+    .education-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    /* Add some bullet points to the card descriptions */
+    .education-card ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    /* Add some icons to the card descriptions */
+    .education-card li {
+        margin-bottom: 5px;
+    }
+
+    .education-card li:before {
+        content: "\f00c";
+        font-family: FontAwesome;
+        margin-right: 5px;
     }
 </style>
