@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PrimeNGConfig } from 'primeng/api';
+
 
 
 
@@ -11,7 +11,7 @@ import { PrimeNGConfig } from 'primeng/api';
 })
 export class AppComponent {
   title = 'my-portfolio';
-  constructor(private router: Router, private primengConfig: PrimeNGConfig) { }
+  constructor(private router: Router) { }
   navigateToAbout() {
     this.router.navigate(['about']);
   }
