@@ -36,9 +36,12 @@
             ],
             "styles": [
               "src/styles.css"
-              
+
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/typed.js/dist/typed.module.js"
+
+            ]
           },
           "configurations": {
             "production": {
@@ -96,10 +99,11 @@
             ],
             "styles": [
               "src/styles.css"
-              
-              
+
+
             ],
             "scripts": [
+              "node_modules/typed.js/dist/typed.module.js"
             ]
           }
         }
