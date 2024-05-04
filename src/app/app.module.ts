@@ -12,7 +12,6 @@ import { EducationComponent } from './education/education.component';
 import { ServicesComponent } from './services/services.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { VerticalNavComponent } from './vertical-nav/vertical-nav.component';
 import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
@@ -25,7 +24,6 @@ import { ContactComponent } from './contact/contact.component';
     ServicesComponent,
     SkillsComponent,
     ProjectsComponent,
-    VerticalNavComponent,
     ContactComponent,
 
   ],
