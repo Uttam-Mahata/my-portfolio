@@ -1,6 +1,6 @@
 {
   "name": "uttamm",
-  "version": "1.0.0",
+  "version": "0.4.8",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
