@@ -1,11 +1,14 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit } from '@angular/core';
 import Typed from 'typed.js';
+// import aos from 'aos';
+
+import * as AOS from 'aos';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements OnInit, AfterViewInit{
   educationItems = [
     {
       title: 'Flowbite Application UI v2.0.0',
@@ -29,9 +32,13 @@ export class HomeComponent implements AfterViewInit {
 
   constructor() { }
 
+  ngOnInit(): void {
+    AOS.init();
+  }
+
   ngAfterViewInit(): void {
     const options = {
-      strings: ['I am a Web Developer', 'Machine Learning and', 'Data Science Enthusiast'],
+      strings: ['Web Developer', 'Machine Learning,', 'DS&AI Enthusiast'],
       typeSpeed: 50,
       backSpeed: 30,
       loop: true

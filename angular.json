@@ -35,11 +35,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/aos/dist/aos.css"
 
             ],
             "scripts": [
-              "node_modules/typed.js/dist/typed.module.js"
+              "node_modules/typed.js/dist/typed.module.js",
+              "node_modules/aos/dist/aos.js"
 
             ]
           },
@@ -98,12 +100,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/aos/dist/aos.css"
 
 
             ],
             "scripts": [
-              "node_modules/typed.js/dist/typed.module.js"
+              "node_modules/typed.js/dist/typed.module.js",
+              "node_modules/aos/dist/aos.js"
             ]
           }
         }

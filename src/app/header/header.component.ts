@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +11,10 @@ export class HeaderComponent {
   isMobileMenuOpen = false; // Property to track the state of the mobile menu
 
   constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    AOS.init(); // Initialize AOS library
+  }
 
   openMobileMenu(): void {
     this.isMobileMenuOpen = true; // Function to open the mobile menu
