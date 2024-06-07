@@ -1,31 +1,16 @@
+<!-- src/app/education/education.component.html -->
+
 <section>
-  <div id="education" class="relative px-6 lg:p-4 lg:px-6 bg-white-100 fly-in" data-aos="fade-up">
+  <div class="relative px-6 lg:p-4 lg:px-6 bg-white-100 fly-in" data-aos="fade-up">
     <br>
     <h1 class="text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">Education</h1>
     <br>
     <ul class="education-list">
-      <li class="education-item" style="--accent-color:#41516C" data-aos="fade-up" data-aos-delay="100">
-        <div class="date">2022 - Present</div>
-        <div class="title">Indian Institute of Engineering Science & Technology, Shibpur</div>
+      <li *ngFor="let item of educationData" class="education-item" [style.--accent-color]="item.accentColor" data-aos="fade-up" [attr.data-aos-delay]="item.delay">
+        <div class="date">{{ item.date }}</div>
+        <div class="title">{{ item.title }}</div>
         <div class="descr">
-          <p>Bachelor of Technology in Computer Science and Technology</p>
-          <p>CGPA: 9.07 (Till 3rd Semester)</p>
-        </div>
-      </li>
-      <li class="education-item" style="--accent-color:red" data-aos="fade-up" data-aos-delay="200">
-        <div class="date">2020 - 2021</div>
-        <div class="title">Higher Secondary Examination</div>
-        <div class="descr">
-          <p>Board: West Bengal Council of Higher Secondary Education</p>
-          <p>Percentage: 92.2%</p>
-        </div>
-      </li>
-      <li class="education-item" style="--accent-color:blue" data-aos="fade-up" data-aos-delay="300">
-        <div class="date">2018 - 2019</div>
-        <div class="title">Secondary Examination</div>
-        <div class="descr">
-          <p>Board: West Bengal Board of Secondary Education</p>
-          <p>Percentage: 93.42%</p>
+          <p *ngFor="let desc of item.description">{{ desc }}</p>
         </div>
       </li>
     </ul>

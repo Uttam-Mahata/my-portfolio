@@ -1,6 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import * as AOS from 'aos';
 
+interface EducationItem {
+  date: string;
+  title: string;
+  description: string[];
+  accentColor: string;
+  delay: number;
+}
+
+
 @Component({
   selector: 'app-education',
   templateUrl: './education.component.html',
@@ -8,25 +17,37 @@ import * as AOS from 'aos';
 })
 export class EducationComponent implements OnInit{
 
-  educationItems = [
+  educationData: EducationItem[] = [
     {
-      title: 'Flowbite Application UI v2.0.0',
-      latest: true,
-      released: 'Released on January 13th, 2022',
-      description: 'Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.'
+      date: "2022 - Present",
+      title: "Indian Institute of Engineering Science & Technology, Shibpur",
+      description: [
+        "Bachelor of Technology in Computer Science and Technology",
+        "CGPA: 9.07 (Till 3rd Semester)",
+      ],
+      accentColor: "#41516C",
+      delay: 100,
     },
     {
-      title: 'Flowbite Figma v1.3.0',
-      latest: false,
-      released: 'Released on December 7th, 2021',
-      description: 'All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.'
+      date: "2020 - 2021",
+      title: "Higher Secondary Examination",
+      description: [
+        "Board: West Bengal Council of Higher Secondary Education",
+        "Percentage: 92.2%",
+      ],
+      accentColor: "red",
+      delay: 200,
     },
     {
-      title: 'Flowbite Library v1.2.2',
-      latest: false,
-      released: 'Released on December 2nd, 2021',
-      description: 'Get started with dozens of web components and interactive elements built on top of Tailwind CSS.'
-    }
+      date: "2018 - 2019",
+      title: "Secondary Examination",
+      description: [
+        "Board: West Bengal Board of Secondary Education",
+        "Percentage: 93.42%",
+      ],
+      accentColor: "blue",
+      delay: 300,
+    },
   ];
 
   constructor() { }

@@ -1,3 +1,4 @@
+
 <div id="skills" class="relative px-6 lg:px-8 bg-white-100 p-4">
   <h1 class="text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl" data-aos="fade-up">Skills</h1>
   <br>
@@ -6,84 +7,12 @@
       <h2 class="text-black text-center">Programming Languages & Tools</h2>
     </div>
     <div class="skills-container">
-      <div class="skills-box" data-aos="zoom-in" data-aos-delay="200">
+      <div *ngFor="let skill of skillsData" class="skills-box" data-aos="zoom-in" [attr.data-aos-delay]="skill.delay">
         <div class="skills-title">
           <div class="skills-img">
-            <img src="https://cdn.freebiesupply.com/logos/large/2x/html-5-logo-png-transparent.png" alt="HTML5" class="skills-icons">
+            <img [src]="skill.imgSrc" [alt]="skill.altText" class="skills-icons">
           </div>
-          <h3>HTML 5</h3>
-        </div>
-      </div>
-      <div class="skills-box" data-aos="zoom-in" data-aos-delay="300">
-        <div class="skills-title">
-          <div class="skills-img">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/CSS.3.svg" alt="CSS3" class="skills-icons">
-          </div>
-          <h3>CSS3</h3>
-        </div>
-      </div>
-      <div class="skills-box" data-aos="zoom-in" data-aos-delay="400">
-        <div class="skills-title">
-          <div class="skills-img">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" class="skills-icons">
-          </div>
-          <h3>JAVASCRIPT</h3>
-        </div>
-      </div>
-      <div class="skills-box" data-aos="zoom-in" data-aos-delay="500">
-        <div class="skills-title">
-          <div class="skills-img">
-            <img src="http://pluspng.com/img-png/nodejs-logo-png-nice-images-collection-node-js-desktop-wallpapers-370.png" alt="Node.js" class="skills-icons">
-          </div>
-          <h3>NODE.JS</h3>
-        </div>
-      </div>
-      <div class="skills-box" data-aos="zoom-in" data-aos-delay="600">
-        <div class="skills-title">
-          <div class="skills-img">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="Git" class="skills-icons">
-          </div>
-          <h3>GIT</h3>
-        </div>
-      </div>
-      <div class="skills-box" data-aos="zoom-in" data-aos-delay="700">
-        <div class="skills-title">
-          <div class="skills-img">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux" class="skills-icons">
-          </div>
-          <h3>Linux</h3>
-        </div>
-      </div>
-      <div class="skills-box" data-aos="zoom-in" data-aos-delay="800">
-        <div class="skills-title">
-          <div class="skills-img">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++" class="skills-icons">
-          </div>
-          <h3>C/C++</h3>
-        </div>
-      </div>
-      <div class="skills-box" data-aos="zoom-in" data-aos-delay="900">
-        <div class="skills-title">
-          <div class="skills-img">
-            <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java" class="skills-icons">
-          </div>
-          <h3>Java</h3>
-        </div>
-      </div>
-      <div class="skills-box" data-aos="zoom-in" data-aos-delay="1000">
-        <div class="skills-title">
-          <div class="skills-img">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg" alt="Angular" class="skills-icons">
-          </div>
-          <h3>Angular</h3>
-        </div>
-      </div>
-      <div class="skills-box" data-aos="zoom-in" data-aos-delay="1100">
-        <div class="skills-title">
-          <div class="skills-img">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" class="skills-icons">
-          </div>
-          <h3>Python</h3>
+          <h3>{{ skill.title }}</h3>
         </div>
       </div>
     </div>
