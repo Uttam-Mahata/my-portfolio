@@ -1,1 +1,14 @@
-<p-menubar [model]="items"></p-menubar>
+<div class="col-12 grid p-justify-center" style=" padding: 1rem 1rem;  border-radius: 20px;">
+    <div class="col-12 md-8">
+        <p-menubar [model]="items">
+
+            <ng-template pTemplate="end">
+                <div class="flex align-items-center gap-2">
+                    <p-avatar image="assets/uttamm.jpg" shape="circle" />
+                </div>
+            </ng-template>
+        </p-menubar>
+
+
+    </div>
+</div>

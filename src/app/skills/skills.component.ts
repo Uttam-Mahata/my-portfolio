@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrl: './skills.component.css'
 })
 export class SkillsComponent {
+  skills = [
+    { name: 'Angular' },
+    { name: 'Spring Boot' },
+    { name: 'Python' },
+    { name: 'Machine Learning' },
+    { name: 'Docker' }
+  ];
+  
 
 }
