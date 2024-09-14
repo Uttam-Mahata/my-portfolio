@@ -1,0 +1,23 @@
+<div class="card">
+    <p-timeline [value]="educationEvents" align="alternate" styleClass="customized-timeline">
+        <ng-template pTemplate="marker" let-event>
+            <span 
+                class="flex w-2rem h-2rem align-items-center justify-content-center text-white border-circle z-1 shadow-1" 
+                [style]="{ 'background-color': event.color }">
+                    <i [class]="event.icon"></i>
+            </span>
+        </ng-template>
+        <ng-template pTemplate="content" let-event>
+            <p-card [header]="event.institution" [subheader]="event.duration">
+                <img 
+                    *ngIf="event.image" 
+                    [src]="'/assets/images/education/' + event.image"
+                    [alt]="event.institution"
+                    width="200" 
+                    class="shadow-2" />
+                <p><strong>{{ event.degree }}</strong></p>
+                <p>{{ event.grade }}</p>
+            </p-card>
+        </ng-template>
+    </p-timeline>
+</div>
