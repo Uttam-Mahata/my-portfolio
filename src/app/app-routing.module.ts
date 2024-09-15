@@ -5,6 +5,8 @@ import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
+import { EducationComponent } from './education/education.component';
+import { ExperienceComponent } from './experience/experience.component';
 
 
 
@@ -14,6 +16,8 @@ const routes: Routes = [
     { path: 'projects', component: ProjectsComponent },
     { path: 'skills', component: SkillsComponent },
     { path: 'contact', component: ContactComponent },
+    {path: 'education', component: EducationComponent},
+    {path: 'experience', component: ExperienceComponent}
 
   
  

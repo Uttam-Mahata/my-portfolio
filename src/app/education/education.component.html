@@ -1,23 +1,28 @@
-<div class="card">
-    <p-timeline [value]="educationEvents" align="alternate" styleClass="customized-timeline">
-        <ng-template pTemplate="marker" let-event>
-            <span 
-                class="flex w-2rem h-2rem align-items-center justify-content-center text-white border-circle z-1 shadow-1" 
-                [style]="{ 'background-color': event.color }">
-                    <i [class]="event.icon"></i>
+<div class="px-4 py-8 md:px-6 lg:px-8">
+    <div class="text-blue-600 text-xl font-medium mb-3">EDUCATION</div>
+    <div class="text-900 text-3xl font-bold mb-3">
+        My Educational Qualifications
+    </div>
+    <div class="text-700">
+        A list of my educational qualifications, including my degrees, grades, and institutions.
+    </div>
+
+    <div class="mb-5 flex mt-4" *ngFor="let event of educationEvents">
+        <div class="flex flex-column align-items-center" style="width: 2rem;">
+            <span class="marker bg-blue-500 text-0 flex align-items-center justify-content-center border-circle p-2">
+                <i [class]="event.icon" class="text-xl"></i>
             </span>
-        </ng-template>
-        <ng-template pTemplate="content" let-event>
-            <p-card [header]="event.institution" [subheader]="event.duration">
-                <img 
-                    *ngIf="event.image" 
-                    [src]="'/assets/images/education/' + event.image"
-                    [alt]="event.institution"
-                    width="200" 
-                    class="shadow-2" />
-                <p><strong>{{ event.degree }}</strong></p>
-                <p>{{ event.grade }}</p>
-            </p-card>
-        </ng-template>
-    </p-timeline>
+            <div class="h-full bg-blue-500" style="width: 2px; min-height: 4rem;"></div>
+        </div>
+        <div class="ml-5 surface-card shadow-2 border-round p-3 flex-auto">
+            <div class="mb-3">
+                <span class="text-900 font-medium inline-block mr-3">{{ event.institution }}</span>
+                <span class="text-500 text-sm">{{ event.duration }}</span>
+            </div>
+            <div class="line-height-3 text-700 mb-3">
+                <strong>{{ event.degree }}</strong> <br/>
+                {{ event.grade }}
+            </div>
+        </div>
+    </div>
 </div>

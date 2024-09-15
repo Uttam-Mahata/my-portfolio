@@ -31,20 +31,21 @@ export class EducationComponent {
       },
       {
         institution: 'Bandhgora Anchal Vidyalaya (H.S)',
-        duration: 'WBBSE, 2018',
-        degree: 'Secondary Examination',
-        grade: 'Grade: 93.42%',
-        icon: 'pi pi-book',
-        color: '#9C27B0',
-      },
-      {
-        institution: 'Bandhgora Anchal Vidyalaya (H.S)',
-        duration: 'WBCHSE, 2020',
+        duration: 'WBCHSE, 2020 - 2021',
         degree: 'Higher Secondary Examination',
         grade: 'Grade: 92.20%',
         icon: 'pi pi-book',
         color: '#FF9800',
       },
+      {
+        institution: 'Bandhgora Anchal Vidyalaya (H.S)',
+        duration: 'WBBSE, 2018 - 2019',
+        degree: 'Secondary Examination',
+        grade: 'Grade: 93.42%',
+        icon: 'pi pi-book',
+        color: '#9C27B0',
+      },
+     
     ];
   }
 }

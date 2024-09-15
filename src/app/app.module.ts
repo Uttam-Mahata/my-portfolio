@@ -17,6 +17,10 @@ import {FormsModule} from "@angular/forms";
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import {AvatarModule} from "primeng/avatar";
+import { ButtonModule } from 'primeng/button';
+import { EducationComponent } from './education/education.component';
+import {TimelineModule} from "primeng/timeline";
+import { ExperienceComponent } from './experience/experience.component';
 
 
 @NgModule({
@@ -28,6 +32,8 @@ import {AvatarModule} from "primeng/avatar";
     SkillsComponent,
     ContactComponent,
     FooterComponent,
+    EducationComponent,
+    ExperienceComponent,
 
 
   ],
@@ -43,6 +49,8 @@ import {AvatarModule} from "primeng/avatar";
     ChipsModule,
     FormsModule,
     AvatarModule,
+    ButtonModule,
+    TimelineModule
 
 
   ],
